@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, #22223b 0%, #4a4e69 100%);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 100vh;
+    background: url('assets/coding.jpg') no-repeat center center/cover;
+    position: relative;
+    z-index: 1;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.7); /* camada branca translúcida */
+    z-index: 0;
+}
+
+section, aside {
+    position: relative;
+    z-index: 1;
+    /* mantém o conteúdo acima do overlay */
+}
+
+section {
+    flex: 2 1 400px;
+    margin: 10px;
+}
+
+aside {
+    flex: 1 1 250px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+}
+
+aside a {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+aside a:hover {
+    color: #22223b;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #22223b 0%, #4a4e69 100%);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a:hover {
+    color: #22223b;
+    text-decoration: underline;
+}
+
+#projects a {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+#projects a:hover {
+    color: #22223b;
+    text-decoration: underline;
+}
+
+#about,
+#skills,
+#projects {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* Remova estas seções da regra abaixo para não sobrescrever a borda */
+aside {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#about,
+#skills,
+#projects,
+aside {
+    /* Remova ou ajuste esta regra para não remover a borda das seções */
+    /* border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin: 10px 0; */
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
